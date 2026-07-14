@@ -36,8 +36,12 @@
   .hero h1 { font-size: clamp(3rem, 10vw, 7.5rem); position: relative; z-index: 2; }
   .flame-word { background: linear-gradient(100deg, var(--flame-amber) 0%, var(--flame-orange) 35%, var(--flame-red) 60%, var(--flame-orange) 85%, var(--flame-amber) 100%); background-size: 300% 100%; -webkit-background-clip: text; background-clip: text; color: transparent; animation: flicker 4s ease-in-out infinite; }
   @keyframes flicker { 0%, 100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
-  .hero-sub { max-width: 600px; margin-top: 28px; font-size: 1.2rem; color: var(--cream-dim); position: relative; z-index: 2; }
-  .hero-meta { display: flex; flex-wrap: wrap; gap: 40px; margin-top: 50px; position: relative; z-index: 2; }
+  .hero-sub { max-width: 600px; margin-top: 28px; font-size: 1.2rem; color: var(--cream-dim); }
+  .hero-meta { display: flex; flex-wrap: wrap; gap: 40px; margin-top: 50px; }
+  .hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 60px; align-items: center; position: relative; z-index: 2; }
+  .hero-photo { aspect-ratio: 4/5; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+  .hero-photo img { width: 100%; height: 100%; object-fit: cover; }
+  @media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; } .hero-photo { max-width: 380px; margin: 0 auto; order: -1; } }
   .hero-meta-item .mono { font-size: 0.75rem; color: var(--cream-dim); display: block; margin-bottom: 6px; }
   .hero-meta-item strong { font-size: 1.2rem; font-weight: 700; }
   .btn-primary { display: inline-block; margin-top: 44px; background: var(--flame-orange); color: var(--ink-black); font-weight: 700; text-decoration: none; padding: 18px 38px; border-radius: 4px; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.05em; transition: all 0.3s ease; }
@@ -117,16 +121,19 @@
 
 <section class="hero">
   <div class="hero-glow"></div>
-  <div class="wrap">
-    <div class="eyebrow mono">Edinburgh · Beginner Friendly · Small Groups</div>
-    <h1>Learn to<br><span class="flame-word">Breathe Fire</span></h1>
-    <p class="hero-sub">A hands-on, one-day workshop teaching you to breathe fire safely and confidently — taught in person, in small groups, with full safety training built in from the start.</p>
-    <div class="hero-meta">
-      <div class="hero-meta-item"><span class="mono">Date</span><strong>August 23rd</strong></div>
-      <div class="hero-meta-item"><span class="mono">Location</span><strong>Pilrig Park, Edinburgh</strong></div>
-      <div class="hero-meta-item"><span class="mono">Duration</span><strong>3 Hours</strong></div>
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <div class="eyebrow mono">Edinburgh · Beginner Friendly · Small Groups</div>
+      <h1>Learn to<br><span class="flame-word">Breathe Fire</span></h1>
+      <p class="hero-sub">A hands-on, one-day workshop teaching you to breathe fire safely and confidently — taught in person, in small groups, with full safety training built in from the start.</p>
+      <div class="hero-meta">
+        <div class="hero-meta-item"><span class="mono">Date</span><strong>August 23rd</strong></div>
+        <div class="hero-meta-item"><span class="mono">Location</span><strong>Pilrig Park, Edinburgh</strong></div>
+        <div class="hero-meta-item"><span class="mono">Duration</span><strong>3 Hours</strong></div>
+      </div>
+      <a href="#pricing" class="btn-primary">Reserve Your Spot →</a>
     </div>
-    <a href="#pricing" class="btn-primary">Reserve Your Spot →</a>
+    <div class="hero-photo"><img src="pictures/Jinn Fire Breathing Temp.png" alt="Julian Jinn fire breathing"></div>
   </div>
 </section>
 
@@ -166,8 +173,7 @@
     <div class="section-tag mono">Your Instructor</div>
     <h2 class="section-title">Taught By Julian</h2>
     <div class="instructor">
-      <div class="instructor-photo"><img src="pictures/Jinn Fire Breathing Temp.png" alt="Julian Jinn"></div>
-      <div><p class="section-lede" style="margin-bottom:0;">[Insert a short bio — your experience performing, how long you've been fire breathing, any notable shows/events, and why you started teaching workshops.]</p></div>
+      <p class="section-lede" style="margin-bottom:0;">[Insert a short bio — your experience performing, how long you've been fire breathing, any notable shows/events, and why you started teaching workshops.]</p>
     </div>
   </div>
 </section>
