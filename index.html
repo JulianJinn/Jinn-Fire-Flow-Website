@@ -39,9 +39,13 @@
   .hero-sub { max-width: 600px; margin-top: 28px; font-size: 1.2rem; color: var(--cream-dim); }
   .hero-meta { display: flex; flex-wrap: wrap; gap: 40px; margin-top: 50px; }
   .hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 60px; align-items: center; position: relative; z-index: 2; }
+  .hero-photo-col { display: flex; flex-direction: column; gap: 20px; }
   .hero-photo { aspect-ratio: 4/5; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
   .hero-photo img { width: 100%; height: 100%; object-fit: cover; }
-  @media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; } .hero-photo { max-width: 380px; margin: 0 auto; order: -1; } }
+  .hero-instructor .mono { font-size: 0.75rem; color: var(--flame-amber); display: block; margin-bottom: 8px; }
+  .hero-instructor h3 { font-size: 1.3rem; margin-bottom: 8px; }
+  .hero-instructor p { color: var(--cream-dim); font-size: 0.95rem; line-height: 1.5; }
+  @media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; } .hero-photo-col { max-width: 380px; margin: 0 auto; order: -1; } }
   .hero-meta-item .mono { font-size: 0.75rem; color: var(--cream-dim); display: block; margin-bottom: 6px; }
   .hero-meta-item strong { font-size: 1.2rem; font-weight: 700; }
   .btn-primary { display: inline-block; margin-top: 44px; background: var(--flame-orange); color: var(--ink-black); font-weight: 700; text-decoration: none; padding: 18px 38px; border-radius: 4px; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.05em; transition: all 0.3s ease; }
@@ -133,7 +137,14 @@
       </div>
       <a href="#pricing" class="btn-primary">Reserve Your Spot →</a>
     </div>
-    <div class="hero-photo"><img src="pictures/Jinn Fire Breathing Temp.png" alt="Julian Jinn fire breathing"></div>
+    <div class="hero-photo-col">
+      <div class="hero-photo"><img src="pictures/Jinn Fire Breathing Temp.png" alt="Julian Jinn fire breathing"></div>
+      <div class="hero-instructor">
+        <span class="mono">Your Instructor</span>
+        <h3>Taught By Julian</h3>
+        <p>[Insert a short bio - your experience performing, how long you've been fire breathing, any notable shows/events, and why you started teaching workshops.]</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -168,15 +179,6 @@
   </div>
 </section>
 
-<section id="instructor">
-  <div class="wrap">
-    <div class="section-tag mono">Your Instructor</div>
-    <h2 class="section-title">Taught By Julian</h2>
-    <div class="instructor">
-      <p class="section-lede" style="margin-bottom:0;">[Insert a short bio — your experience performing, how long you've been fire breathing, any notable shows/events, and why you started teaching workshops.]</p>
-    </div>
-  </div>
-</section>
 
 <section id="pricing">
   <div class="wrap">
